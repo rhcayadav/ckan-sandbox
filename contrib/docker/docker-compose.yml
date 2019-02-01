@@ -11,10 +11,7 @@ volumes:
 services:
   ckan:
     container_name: ckan
-    build:
-      context: ../../
-      args:
-          - CKAN_SITE_URL=${CKAN_SITE_URL}
+    image: rhcayadav/ckan:sand1
     links:
       - db
       - solr
